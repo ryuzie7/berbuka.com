@@ -1,0 +1,25 @@
+{
+  "name": "Berbuka.com - Ramadan Community",
+  "short_name": "Berbuka",
+  "description": "Find Iftar/Moreh locations, Ramadan Bazaars, and Ride Shares during Ramadan",
+  "theme_color": "#10b981",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
