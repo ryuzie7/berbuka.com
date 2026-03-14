@@ -1,0 +1,131 @@
+{
+  "nav": {
+    "home": "Utama",
+    "explore": "Jelajah",
+    "profile": "Profil"
+  },
+  "venue": {
+    "masjid": "Masjid",
+    "surau": "Surau",
+    "bazaar": "Bazar Ramadan",
+    "verified": "Disahkan",
+    "capacity": "Kapasiti: {count} orang",
+    "getDirections": "Dapatkan Arah",
+    "noVenuesFound": "Tiada venue dijumpai",
+    "noVenuesHint": "Cuba ubah tapisan atau carian anda",
+    "facilities": "Kemudahan",
+    "contribute": "Kongsi Status"
+  },
+  "filter": {
+    "title": "Tapis Venue",
+    "venueType": "Jenis Venue",
+    "verifiedOnly": "Disahkan sahaja",
+    "searchRadius": "Radius Carian",
+    "radiusValue": "{value} km",
+    "reset": "Set Semula",
+    "apply": "Guna",
+    "filterVenues": "Tapis venue"
+  },
+  "search": {
+    "placeholder": "Cari venue..."
+  },
+  "program": {
+    "title": "Program Ramadan",
+    "iftar": "Iftar",
+    "moreh": "Moreh",
+    "terawih": "Terawih",
+    "tadarus": "Tadarus",
+    "other": "Lain-lain"
+  },
+  "landing": {
+    "hero": {
+      "title": "Cari Tempat Berbuka & Moreh Di Kinta Utara.",
+      "subtitle": "Senarai masjid, surau, dan bazaar Ramadan terkini untuk komuniti Ipoh.",
+      "cta": "Mula Cari Lokasi"
+    },
+    "steps": {
+      "title": "Bagaimana Ia Berfungsi",
+      "step1": {
+        "title": "Cari Lokasi Berdekatan",
+        "description": "Lihat peta untuk masjid, surau, atau bazar berhampiran."
+      },
+      "step2": {
+        "title": "Semak Menu & Status",
+        "description": "Dapatkan maklumat terkini termasuk status makanan."
+      },
+      "step3": {
+        "title": "Lapor Status Terkini",
+        "description": "Bantu komuniti dengan berkongsi status venue (Bantu Asnaf)."
+      }
+    },
+    "tutorial": {
+      "title": "Tutorial Penggunaan",
+      "placeholder": "Video tutorial akan datang tidak lama lagi..."
+    }
+  },
+  "contribution": {
+    "title": "Kongsi Kemas Kini",
+    "todaysMenu": "Menu Hari Ini",
+    "todaysMenuPlaceholder": "Contoh: Nasi Lemak, Mee Goreng...",
+    "foodStatus": "Status Makanan",
+    "foodStatusOptions": {
+      "available": "Masih Ada",
+      "running_low": "Sedang Habis",
+      "finished": "Habis"
+    },
+    "crowdLevel": "Tahap Keramaian",
+    "crowdLevelOptions": {
+      "quiet": "Tenang",
+      "moderate": "Sedang Penuh",
+      "crowded": "Padat"
+    },
+    "submit": "Hantar Kemas Kini",
+    "success": "Terima kasih! Kemas kini anda telah dihantar."
+  },
+  "profile": {
+    "title": "Profil",
+    "communityMember": "Ahli Komuniti",
+    "welcome": "Selamat Datang ke Berbuka",
+    "settings": "Tetapan",
+    "appearance": "Penampilan",
+    "light": "Cerah",
+    "dark": "Gelap",
+    "system": "Sistem",
+    "language": "Bahasa",
+    "contribute": "Sumbangan",
+    "submitVenue": "Hantar Venue",
+    "submitVenueDesc": "Bantu kembangkan komuniti dengan menambah venue baharu",
+    "about": "Perihal",
+    "appName": "Berbuka.com",
+    "appDesc": "Cari lokasi Iftar/Moreh dan Bazar Ramadan semasa Ramadan di Kinta Utara. Dibina untuk komuniti, oleh komuniti."
+  },
+  "submitVenue": {
+    "title": "Hantar Venue",
+    "details": "Maklumat Venue",
+    "name": "Nama",
+    "namePlaceholder": "cth. Masjid Al-Hidayah",
+    "type": "Jenis",
+    "address": "Alamat",
+    "addressPlaceholder": "Alamat penuh",
+    "description": "Keterangan",
+    "descriptionPlaceholder": "Ceritakan tentang venue ini...",
+    "contact": "Nombor Telefon",
+    "contactPlaceholder": "+60x-xxx-xxxx",
+    "facilities": "Kemudahan",
+    "submit": "Hantar Venue",
+    "submitting": "Menghantar...",
+    "success": "Venue dihantar untuk semakan!",
+    "required": "wajib",
+    "errors": {
+      "nameRequired": "Nama venue diperlukan",
+      "addressRequired": "Alamat diperlukan",
+      "descriptionRequired": "Keterangan diperlukan"
+    }
+  },
+  "common": {
+    "close": "Tutup",
+    "back": "Kembali",
+    "loading": "Memuatkan...",
+    "error": "Sesuatu tidak kena"
+  }
+}

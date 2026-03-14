@@ -1,13 +1,17 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages } from "next-intl/server";
 import "./globals.css";
 import { BottomNav } from "@/components/layout/BottomNav";
+import { Toaster } from "@/components/ui/sonner";
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Berbuka.com - Ramadan Community",
-  description: "Find Iftar/Moreh locations, Ramadan Bazaars, and Ride Shares during Ramadan",
+  description: "Find Iftar/Moreh locations and Ramadan Bazaars during Ramadan in Kinta Utara",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
@@ -24,22 +28,31 @@ export const viewport: Viewport = {
   themeColor: "#10b981",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
+  const messages = await getMessages();
+
   return (
-    <html lang="en">
+    <html lang={locale} suppressHydrationWarning>
       <head>
+        <meta name="darkreader-lock" />
         <link rel="icon" href="/icons/icon-192x192.png" />
         <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
       </head>
       <body className={`${inter.className} antialiased`}>
-        <main className="h-full w-full pb-nav-height">
-          {children}
-        </main>
-        <BottomNav />
+        <NextIntlClientProvider messages={messages}>
+          <ThemeProvider>
+            <main className="h-full w-full pb-nav-height">
+              {children}
+            </main>
+            <BottomNav />
+            <Toaster />
+          </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

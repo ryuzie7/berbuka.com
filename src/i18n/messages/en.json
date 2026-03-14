@@ -1,0 +1,131 @@
+{
+  "nav": {
+    "home": "Home",
+    "explore": "Explore",
+    "profile": "Profile"
+  },
+  "venue": {
+    "masjid": "Masjid",
+    "surau": "Surau",
+    "bazaar": "Bazaar Ramadan",
+    "verified": "Verified",
+    "capacity": "Capacity: {count} people",
+    "getDirections": "Get Directions",
+    "noVenuesFound": "No venues found",
+    "noVenuesHint": "Try adjusting your filters or search query",
+    "facilities": "Facilities",
+    "contribute": "Share Status"
+  },
+  "filter": {
+    "title": "Filter Venues",
+    "venueType": "Venue Type",
+    "verifiedOnly": "Verified only",
+    "searchRadius": "Search Radius",
+    "radiusValue": "{value} km",
+    "reset": "Reset",
+    "apply": "Apply",
+    "filterVenues": "Filter venues"
+  },
+  "search": {
+    "placeholder": "Search venues..."
+  },
+  "program": {
+    "title": "Ramadan Programs",
+    "iftar": "Iftar",
+    "moreh": "Moreh",
+    "terawih": "Terawih",
+    "tadarus": "Tadarus",
+    "other": "Other"
+  },
+  "landing": {
+    "hero": {
+      "title": "Find Iftar & Moreh Locations in Kinta Utara.",
+      "subtitle": "Discover mosques, suraus, and Ramadan bazaars for the Ipoh community.",
+      "cta": "Start Exploring"
+    },
+    "steps": {
+      "title": "How It Works",
+      "step1": {
+        "title": "Find Nearby Locations",
+        "description": "View the map to find mosques, suraus, or bazaars near you."
+      },
+      "step2": {
+        "title": "Check Menu & Status",
+        "description": "Get the latest information including food availability."
+      },
+      "step3": {
+        "title": "Report Current Status",
+        "description": "Help the community by sharing venue status updates."
+      }
+    },
+    "tutorial": {
+      "title": "How to Use",
+      "placeholder": "Video tutorial coming soon..."
+    }
+  },
+  "contribution": {
+    "title": "Share Update",
+    "todaysMenu": "Today's Menu",
+    "todaysMenuPlaceholder": "e.g. Nasi Lemak, Mee Goreng...",
+    "foodStatus": "Food Status",
+    "foodStatusOptions": {
+      "available": "Available",
+      "running_low": "Running Low",
+      "finished": "Finished"
+    },
+    "crowdLevel": "Crowd Level",
+    "crowdLevelOptions": {
+      "quiet": "Quiet",
+      "moderate": "Moderate",
+      "crowded": "Crowded"
+    },
+    "submit": "Submit Update",
+    "success": "Thank you! Your update has been submitted."
+  },
+  "profile": {
+    "title": "Profile",
+    "communityMember": "Community Member",
+    "welcome": "Welcome to Berbuka",
+    "settings": "Settings",
+    "appearance": "Appearance",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "language": "Language",
+    "contribute": "Contribute",
+    "submitVenue": "Submit a Venue",
+    "submitVenueDesc": "Help grow the community by adding new venues",
+    "about": "About",
+    "appName": "Berbuka.com",
+    "appDesc": "Find Iftar/Moreh locations and Ramadan Bazaars during Ramadan in Kinta Utara. Built for the community, by the community."
+  },
+  "submitVenue": {
+    "title": "Submit a Venue",
+    "details": "Venue Details",
+    "name": "Name",
+    "namePlaceholder": "e.g. Masjid Al-Hidayah",
+    "type": "Type",
+    "address": "Address",
+    "addressPlaceholder": "Full address",
+    "description": "Description",
+    "descriptionPlaceholder": "Tell us about this venue...",
+    "contact": "Contact Number",
+    "contactPlaceholder": "+60x-xxx-xxxx",
+    "facilities": "Facilities",
+    "submit": "Submit Venue",
+    "submitting": "Submitting...",
+    "success": "Venue submitted for review!",
+    "required": "required",
+    "errors": {
+      "nameRequired": "Venue name is required",
+      "addressRequired": "Address is required",
+      "descriptionRequired": "Description is required"
+    }
+  },
+  "common": {
+    "close": "Close",
+    "back": "Back",
+    "loading": "Loading...",
+    "error": "Something went wrong"
+  }
+}

@@ -1,4 +1,21 @@
 {
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:developers.google.com)",
+      "WebFetch(domain:visgl.github.io)",
+      "mcp__plugin_claude-mem_mcp-search__save_memory",
+      "mcp__plugin_claude-mem_mcp-search__search",
+      "mcp__plugin_claude-mem_mcp-search__get_observations",
+      "WebFetch(domain:medium.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:webpeak.org)",
+      "WebFetch(domain:blog.olivierlarose.com)",
+      "mcp__docker__browser_navigate",
+      "mcp__docker__browser_take_screenshot",
+      "mcp__docker__browser_close"
+    ]
+  },
   "enabledPlugins": {
     "claude-mem@thedotmack": true
   },

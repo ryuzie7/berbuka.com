@@ -2,7 +2,7 @@ import type { VenueType } from '@/types';
 
 export const VENUE_COLORS: Record<VenueType, string> = {
   masjid: '#10b981',  // Emerald green
-  surau: '#10b981',   // Emerald green
+  surau: '#14b8a6',   // Teal (distinct from masjid)
   bazaar: '#f97316'   // Orange
 };
 

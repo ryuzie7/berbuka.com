@@ -1,5 +1,27 @@
 export type VenueType = 'masjid' | 'surau' | 'bazaar';
 
+export type ProgramType = 'iftar' | 'moreh' | 'terawih' | 'tadarus' | 'other';
+
+export type FoodStatus = 'available' | 'running_low' | 'finished';
+export type CrowdLevel = 'quiet' | 'moderate' | 'crowded';
+
+export interface VenueContribution {
+  venueId: string;
+  todaysMenu?: string;
+  foodStatus: FoodStatus;
+  crowdLevel: CrowdLevel;
+  submittedAt: Date;
+}
+
+export interface VenueProgram {
+  id: string;
+  name: string;
+  description?: string;
+  time: string;
+  days: string[];
+  type: ProgramType;
+}
+
 export interface Venue {
   id: string;
   name: string;
@@ -12,6 +34,26 @@ export interface Venue {
   capacity?: number;
   facilities?: string[];
   contactNumber?: string;
+  featured?: boolean;
+  programs?: VenueProgram[];
+}
+
+export interface VenueSubmission {
+  name: string;
+  type: VenueType;
+  address: string;
+  description: string;
+  lat?: number;
+  lng?: number;
+  facilities: string[];
+  contactNumber?: string;
+}
+
+export type MapTheme = 'quiet' | 'default';
+
+export interface MapState {
+  theme: MapTheme;
+  toggleTheme: () => void;
 }
 
 export interface MapConfig {

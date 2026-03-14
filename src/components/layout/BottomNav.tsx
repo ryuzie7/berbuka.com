@@ -1,70 +1,95 @@
 'use client';
 
-import { Map, List, Car, User } from 'lucide-react';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
+import { Home, Map, User } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { useState } from 'react';
+import { springs } from '@/lib/animations';
 
 type NavItem = {
   id: string;
-  label: string;
-  icon: React.ReactNode;
+  labelKey: string;
+  Icon: React.ComponentType<{ className?: string }>;
   href: string;
 };
 
 const NAV_ITEMS: NavItem[] = [
   {
-    id: 'explore',
-    label: 'Explore',
-    icon: <Map className="h-6 w-6" />,
+    id: 'home',
+    labelKey: 'home',
+    Icon: Home,
     href: '/',
   },
   {
-    id: 'list',
-    label: 'List',
-    icon: <List className="h-6 w-6" />,
-    href: '/list',
-  },
-  {
-    id: 'rides',
-    label: 'Rides',
-    icon: <Car className="h-6 w-6" />,
-    href: '/rides',
+    id: 'explore',
+    labelKey: 'explore',
+    Icon: Map,
+    href: '/map',
   },
   {
     id: 'profile',
-    label: 'Profile',
-    icon: <User className="h-6 w-6" />,
+    labelKey: 'profile',
+    Icon: User,
     href: '/profile',
   },
 ];
 
 export function BottomNav() {
-  const [activeTab, setActiveTab] = useState('explore');
+  const pathname = usePathname();
+  const t = useTranslations('nav');
+
+  const isActive = (href: string) =>
+    href === '/' ? pathname === '/' : pathname.startsWith(href);
 
   return (
     <nav
-      className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50"
+      className="fixed bottom-0 left-0 right-0 bg-background border-t border-border z-50"
       style={{ paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}
     >
       <div className="flex justify-around items-center h-16">
-        {NAV_ITEMS.map((item) => (
-          <button
-            key={item.id}
-            onClick={() => setActiveTab(item.id)}
-            className={cn(
-              'flex flex-col items-center justify-center gap-1 px-3 py-2 rounded-lg transition-colors',
-              'min-w-[44px] min-h-[44px]', // Minimum touch target size
-              activeTab === item.id
-                ? 'text-ramadan-green'
-                : 'text-gray-500 hover:text-gray-700'
-            )}
-            aria-label={item.label}
-            aria-current={activeTab === item.id ? 'page' : undefined}
-          >
-            {item.icon}
-            <span className="text-xs font-medium">{item.label}</span>
-          </button>
-        ))}
+        {NAV_ITEMS.map((item) => {
+          const label = t(item.labelKey);
+          const active = isActive(item.href);
+
+          return (
+            <Link
+              key={item.id}
+              href={item.href}
+              className={cn(
+                'relative flex flex-col items-center justify-center gap-1 px-3 py-2 rounded-lg transition-colors',
+                'min-w-[44px] min-h-[44px]',
+                active
+                  ? 'text-primary'
+                  : 'text-muted-foreground hover:text-foreground'
+              )}
+              aria-label={label}
+              aria-current={active ? 'page' : undefined}
+            >
+              {/* Animated background pill - uses layoutId for smooth transition */}
+              {active && (
+                <motion.div
+                  layoutId="nav-pill"
+                  className="absolute inset-0 bg-primary/10 rounded-lg"
+                  transition={springs.snappy}
+                />
+              )}
+
+              {/* Icon with scale animation */}
+              <motion.div
+                animate={{
+                  scale: active ? 1.1 : 1,
+                }}
+                transition={springs.snappy}
+              >
+                <item.Icon className="h-6 w-6 relative z-10" />
+              </motion.div>
+
+              <span className="text-xs font-medium relative z-10">{label}</span>
+            </Link>
+          );
+        })}
       </div>
     </nav>
   );

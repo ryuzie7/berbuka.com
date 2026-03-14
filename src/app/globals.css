@@ -89,3 +89,62 @@ html, body, #__next {
   margin: 0;
   padding: 0;
 }
+
+/* Pulse animation for featured venues */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   View Transitions API - Circular Reveal Theme Toggle
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Disable the default crossfade animation */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+/* Old view sits underneath */
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+/* New view expands as a circle from the click point */
+::view-transition-new(root) {
+  z-index: 9999;
+  animation: circle-reveal 0.5s ease-out;
+}
+
+@keyframes circle-reveal {
+  from {
+    clip-path: circle(0% at var(--click-x, 50%) var(--click-y, 50%));
+  }
+  to {
+    clip-path: circle(150% at var(--click-x, 50%) var(--click-y, 50%));
+  }
+}
+
+/* Reverse animation direction when switching FROM dark mode
+   (old dark view clips out, revealing new light view underneath) */
+.dark::view-transition-old(root) {
+  z-index: 9999;
+  animation: circle-reveal 0.5s ease-out reverse;
+}
+
+.dark::view-transition-new(root) {
+  z-index: 1;
+  animation: none;
+}
